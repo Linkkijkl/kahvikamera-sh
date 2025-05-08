@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+
 ! command -v ffmpeg \
     && "This script requires ffmpeg to work!" && exit 1
 ! command -v curl \
